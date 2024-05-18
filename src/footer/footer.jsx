@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-logo">
           <a href="/">
-            <img src="src\NavBar\makLogo.png" alt="" />
+            <img src="src/assets/makLogo.png" alt="mujtabaalikhan logo" />
           </a>
         </div>
         <div className="footerSocialContainer">

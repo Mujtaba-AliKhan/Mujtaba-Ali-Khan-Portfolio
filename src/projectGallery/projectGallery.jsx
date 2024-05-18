@@ -107,7 +107,7 @@ const ProjectGallery = () => {
                     }}
                   >
                     <source
-                      src={`src\\projectGallery\\Gallery\\Wikipurrdia\\wikipurrdia${num}.mp4`}
+                      src={`src/assets/Gallery/Wikipurrdia/wikipurrdia${num}.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -153,7 +153,7 @@ const ProjectGallery = () => {
                     }}
                   >
                     <source
-                      src={`src\\projectGallery\\Gallery\\Weather App\\weather-app${num}.mp4`}
+                      src={`src/assets/Gallery/Weather App/weather-app${num}.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -199,7 +199,7 @@ const ProjectGallery = () => {
                     }}
                   >
                     <source
-                      src={`src\\projectGallery\\Gallery\\Resume Builder\\Resume-Builder${num}.mp4`}
+                      src={`src/assets/Gallery/Resume Builder/Resume-Builder${num}.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -245,7 +245,7 @@ const ProjectGallery = () => {
                     }}
                   >
                     <source
-                      src={`src\\projectGallery\\Gallery\\Todo List\\todoList${num}.mp4`}
+                      src={`src/assets/Gallery/Todo List/todoList${num}.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -273,7 +273,7 @@ const ProjectGallery = () => {
                 showMediaContainer.foodMunch ? "show" : "hide"
               }`}
             >
-              {[1].map((num, index) => (
+              {[1].map((index) => (
                 <div key={index} className="videoDescription">
                   <h3>{FoodMunchVideoDescriptions[index]}</h3>
 
@@ -291,7 +291,7 @@ const ProjectGallery = () => {
                     }}
                   >
                     <source
-                      src={`src\\projectGallery\\Gallery\\Food Munch\\foodmunch.mp4`}
+                      src={`src/assets/Gallery/Food Munch/foodmunch.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.

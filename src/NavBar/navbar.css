@@ -19,7 +19,7 @@
   font-size: 1.2rem;
   filter: drop-shadow(-2px 1px 1px black);
   background: linear-gradient(to right, #000046, #1cb5e0);
-  padding: 5px;
+  padding: 10px;
   border-radius: 10% 50%;
   transition: all 0.3s ease;
 }

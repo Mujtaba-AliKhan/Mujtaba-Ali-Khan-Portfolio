@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="navbarContainer">
       <div className="logoContainer">
         <Link to="/">
-          <img src="src\NavBar\makLogo.png" alt="logo" height={"80px"} />
+          <img src="src/assets/makLogo.png" alt="logo" height={"80px"} />
         </Link>
       </div>
       <div className="navItemContainer">
