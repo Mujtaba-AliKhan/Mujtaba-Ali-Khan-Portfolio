@@ -1,0 +1,105 @@
+.projectsContainer {
+  background-color: #dfe6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: "BioRhyme", "Arial", sans-serif;
+}
+
+.projectHeading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.projectItem {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  width: 80%;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  transition: all 0.3s ease-in-out;
+}
+.projectItem h1,
+.projectItem h3 {
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+.projectItem:hover {
+  transform: translateY(-10px);
+}
+
+.projectItemDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectImage {
+  flex: 2;
+  margin-bottom: 1rem;
+}
+
+.projectImage img {
+  width: 100%;
+  height: auto;
+  box-shadow: 2px 2px 15px black;
+  border-radius: 10px;
+}
+
+.projectDescription {
+  flex: 2;
+  padding: 2rem;
+  color: #d1d1d1;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+}
+.projectDescription h4 {
+  font-weight: 500;
+}
+.githubLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0366d6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.githubLink:hover {
+  text-decoration: underline;
+}
+.projectSeeMore {
+  text-decoration: underline;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.projectSeeMore:hover {
+  color: #0366d6;
+}
+.projectDescription h3 {
+  margin: 10px 0;
+}
+.projectSeeMoreDetails.hide {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.projectSeeMoreDetails.show {
+  max-height: 100%;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .projectItemDetails {
+    flex-direction: row;
+  }
+
+  .projectImage {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+}

@@ -1,0 +1,92 @@
+.about-me {
+  background-color: #1e1e1e;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 2px -2px 50px -6px #000000;
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: "BioRhyme", "Arial", sans-serif;
+  color: #d1d1d1;
+  line-height: 1.8;
+  margin-top: 7rem;
+}
+
+.about-me h1 {
+  font-size: 3em;
+  color: #e67e22;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #e67e22;
+}
+
+.about-me-content p {
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+
+.about-me-content a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-me-content a:hover {
+  text-decoration: underline;
+}
+
+.about-me-content strong {
+  color: #ffffff;
+}
+
+.projects,
+.experience,
+.education,
+.courses {
+  text-align: left;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.projects h2,
+.experience h2,
+.education h2,
+.courses h2 {
+  font-size: 1.5em;
+  color: #e67e22;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+.projects ul,
+.experience ul,
+.courses ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projects ul li,
+.experience ul li,
+.courses ul li {
+  margin-bottom: 10px;
+}
+
+.projects ul li ul,
+.experience ul li ul {
+  margin-top: 5px;
+  padding-left: 25px;
+  list-style-type: square;
+}

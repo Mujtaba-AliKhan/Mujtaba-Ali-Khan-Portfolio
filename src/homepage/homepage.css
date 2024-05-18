@@ -1,0 +1,22 @@
+@import url(https://db.onlinewebfonts.com/c/07cb29fdcb073fff840edc6de2067b50?family=Amsterdam+Four_ttf);
+
+.homepageName {
+  color: #ffffff;
+  font-family: "Amsterdam Four_ttf";
+  margin-top: 15rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.wipe-animation {
+  animation: wipe-text 4s forwards;
+}
+
+@keyframes wipe-text {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
