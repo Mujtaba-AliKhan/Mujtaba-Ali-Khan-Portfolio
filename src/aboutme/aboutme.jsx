@@ -7,7 +7,7 @@ const AboutMe = () => {
       <h1>About Me</h1>
       <div className="about-me-content">
         <img
-          src="/src/aboutme/mujtabaalikhan.jpg"
+          src="/src/assets/mujtabaalikhan.jpg"
           alt="Mujtaba Ali Khan"
           className="profile-photo"
         />

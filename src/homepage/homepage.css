@@ -6,10 +6,12 @@
   margin-top: 15rem;
   font-size: 2.5rem;
   text-align: center;
+  z-index: 5;
 }
 
 .wipe-animation {
   animation: wipe-text 4s forwards;
+  z-index: 5;
 }
 
 @keyframes wipe-text {
