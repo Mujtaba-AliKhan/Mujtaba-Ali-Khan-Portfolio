@@ -9,7 +9,7 @@ const StarBackground = () => {
 
     for (let i = 0; i < 500; i++) {
       const star = document.createElement("img");
-      star.src = "/src/assets/star.png";
+      star.src = "/star.png";
       star.className = `star size${Math.floor(Math.random() * 5) + 1}`;
 
       star.style.top = `${Math.random() * window.innerHeight}px`;

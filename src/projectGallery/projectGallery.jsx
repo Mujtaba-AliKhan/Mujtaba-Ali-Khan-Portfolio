@@ -107,7 +107,7 @@ const ProjectGallery = () => {
                     }}
                   >
                     <source
-                      src={`/src/assets/Gallery/Wikipurrdia/wikipurrdia${num}.mp4`}
+                      src={`/Gallery/Wikipurrdia/wikipurrdia${num}.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -153,7 +153,7 @@ const ProjectGallery = () => {
                     }}
                   >
                     <source
-                      src={`/src/assets/Gallery/Weather App/weather-app${num}.mp4`}
+                      src={`/Gallery/Weather App/weather-app${num}.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -199,7 +199,7 @@ const ProjectGallery = () => {
                     }}
                   >
                     <source
-                      src={`/src/assets/Gallery/Resume Builder/Resume-Builder${num}.mp4`}
+                      src={`/Gallery/Resume Builder/Resume-Builder${num}.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -245,7 +245,7 @@ const ProjectGallery = () => {
                     }}
                   >
                     <source
-                      src={`/src/assets/Gallery/Todo List/todoList${num}.mp4`}
+                      src={`/Gallery/Todo List/todoList${num}.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -291,7 +291,7 @@ const ProjectGallery = () => {
                     }}
                   >
                     <source
-                      src={`/src/assets/Gallery/Food Munch/foodmunch.mp4`}
+                      src={`/Gallery/Food Munch/foodmunch.mp4`}
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.

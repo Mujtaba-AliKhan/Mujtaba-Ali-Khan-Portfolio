@@ -30,10 +30,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                src="/src/assets/Projects Images/wikipurrdiaImage.png"
-                alt=""
-              />
+              <img src="/Projects Images/wikipurrdiaImage.png" alt="" />
             </a>
           </div>
           <div className="projectDescription">
@@ -108,7 +105,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/src/assets/Projects Images/weather app.png" alt="" />
+              <img src="/Projects Images/weather app.png" alt="" />
             </a>
           </div>
           <div className="projectDescription">
@@ -191,7 +188,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/src/assets/Projects Images/resumeBuilder.png" alt="" />
+              <img src="/Projects Images/resumeBuilder.png" alt="" />
             </a>
           </div>
           <div className="projectDescription">
@@ -278,7 +275,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/src/assets/Projects Images/to-do app.png" alt="" />
+              <img src="/Projects Images/to-do app.png" alt="" />
             </a>
           </div>
           <div className="projectDescription">
@@ -356,7 +353,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/src/assets/Projects Images/foodMunchApp.png" alt="" />
+              <img src="/Projects Images/foodMunchApp.png" alt="" />
             </a>
           </div>
           <div className="projectDescription">

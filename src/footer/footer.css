@@ -1,6 +1,6 @@
 .footer {
   background-color: #1e1e1e;
-  padding: 30px 20px;
+  padding: 20px 0;
   text-align: center;
   color: #d1d1d1;
   border-top: 2px solid #e67e22;
@@ -9,7 +9,7 @@
 .footer-content {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 10px;
+  align-items: center;
 }
 
 .footer-logo img {
@@ -31,7 +31,6 @@
 .footerSocialContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .footer-icon {
   color: #d1d1d1;

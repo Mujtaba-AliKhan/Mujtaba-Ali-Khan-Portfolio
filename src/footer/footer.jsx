@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-logo">
           <a href="/">
-            <img src="/src/assets/makLogo.png" alt="mujtabaalikhan logo" />
+            <img src="/makLogo.png" alt="mujtabaalikhan logo" />
           </a>
         </div>
         <div className="footerSocialContainer">
@@ -53,7 +53,7 @@ const Footer = () => {
               mujtabaalikhan01@gmail.com
             </a>
           </p>
-          <p>Phone: +91-1234567890</p>
+          <p>Phone: +91-9113645590</p>
           <p>Location: Hyderabad, India</p>
         </div>
       </div>

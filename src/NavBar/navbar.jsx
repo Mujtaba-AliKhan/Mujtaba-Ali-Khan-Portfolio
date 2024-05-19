@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="navbarContainer">
       <div className="logoContainer">
         <Link to="/">
-          <img src="/src/assets/makLogo.png" alt="logo" height={"80px"} />
+          <img src="/makLogo.png" alt="logo" height={"80px"} />
         </Link>
       </div>
       <div className="navItemContainer">
@@ -21,7 +21,7 @@ const Navbar = () => {
             <Link to="/projectgallery">Project Gallery</Link>
           </li>
           <li>
-            <Link to="src\assets\Mujtaba Ali Khan Resume.pdf" target="blank">
+            <Link to="/Mujtaba Ali Khan Resume.pdf" target="blank">
               Resume
             </Link>
           </li>
