@@ -33,7 +33,7 @@ const Footer = () => {
               <i className="bi bi-envelope"></i>
             </a>
             <a
-              href="https://www.instagram.com/your_instagram_username"
+              href="https://www.instagram.com/__mujtaba05__"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-icon"
