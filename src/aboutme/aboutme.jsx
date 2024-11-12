@@ -111,10 +111,6 @@ ensuring efficient and accurate solutions in line with company
 service standards.
 
                 </li>
-                <li>
-                  Communicated complex tech concepts to 100+ non-tech
-                  stakeholders with a 90% satisfaction rate.
-                </li>
               </ul>
             </li>
             <li>
