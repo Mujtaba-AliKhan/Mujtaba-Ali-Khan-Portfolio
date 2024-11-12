@@ -100,6 +100,14 @@ const Projects = () => {
             >
               View on GitHub
             </a>
+            <a
+              href="https://wikipurrdia.netlify.app/"
+              className="githubLink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Netlify
+            </a>
           </div>
         </div>
       </div>
