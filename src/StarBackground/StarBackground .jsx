@@ -6,7 +6,6 @@ import Projects from "../projects/projects";
 const StarBackground = () => {
   useEffect(() => {
     const stars = [];
-    // const numStars = window.innerWidth < 768 ? 200 : 500;
     const isWideScreen = window.innerWidth > 768;
     const numStars = isWideScreen ? 500 : 200;
 
@@ -88,7 +87,7 @@ const StarBackground = () => {
   }, []);
 
   return (
-    <div>
+    <div className="starBackground">
       <div className="sky">
         <Homepage />
       </div>
