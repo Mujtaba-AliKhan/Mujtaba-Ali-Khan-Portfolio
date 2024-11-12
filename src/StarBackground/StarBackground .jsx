@@ -6,54 +6,59 @@ import Projects from "../projects/projects";
 const StarBackground = () => {
   useEffect(() => {
     const stars = [];
+    // const numStars = window.innerWidth < 768 ? 200 : 500;
+    const isWideScreen = window.innerWidth > 768;
+    const numStars = isWideScreen ? 500 : 200;
 
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < numStars; i++) {
       const star = document.createElement("img");
       star.src = "/star.png";
       star.className = `star size${Math.floor(Math.random() * 5) + 1}`;
-
       star.style.top = `${Math.random() * window.innerHeight}px`;
       star.style.left = `${Math.random() * window.innerWidth}px`;
       document.body.appendChild(star);
       stars.push(star);
     }
 
-    stars.forEach((star) => {
-      star.addEventListener("mouseover", () => moveAway(star));
-      star.addEventListener("mouseout", () => moveToOriginalPosition(star));
-    });
-
-    document.addEventListener("mousemove", (event) => {
-      const mouseX = event.clientX;
-      const mouseY = event.clientY;
-
+    if (isWideScreen) {
       stars.forEach((star) => {
-        const { top, left } = star.getBoundingClientRect();
-        const distance = calculateDistance(
-          mouseX,
-          mouseY,
-          left + star.offsetWidth / 2,
-          top + star.offsetHeight / 2
+        star.addEventListener("mouseover", (event) =>
+          moveAway(star, event.clientX, event.clientY)
         );
-
-        if (distance < 100) {
-          moveAway(star, mouseX, mouseY);
-        } else {
-          moveToOriginalPosition(star);
-        }
+        star.addEventListener("mouseout", () => moveToOriginalPosition(star));
       });
-    });
+
+      document.addEventListener("mousemove", (event) => {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        stars.forEach((star) => {
+          const { top, left } = star.getBoundingClientRect();
+          const distance = calculateDistance(
+            mouseX,
+            mouseY,
+            left + star.offsetWidth / 2,
+            top + star.offsetHeight / 2
+          );
+
+          if (distance < 100) {
+            moveAway(star, mouseX, mouseY);
+          } else {
+            moveToOriginalPosition(star);
+          }
+        });
+      });
+    }
 
     function moveAway(star, mouseX, mouseY) {
       const starRect = star.getBoundingClientRect();
       const dx = starRect.left + starRect.width / 2 - mouseX;
       const dy = starRect.top + starRect.height / 2 - mouseY;
       const angle = Math.atan2(dy, dx);
-      const distance = 100;
+      const distance = 50;
 
       const offsetX = distance * Math.cos(angle);
       const offsetY = distance * Math.sin(angle);
-
       star.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
     }
 
@@ -69,10 +74,14 @@ const StarBackground = () => {
 
     return () => {
       stars.forEach((star) => {
-        star.removeEventListener("mouseover", () => moveAway(star));
-        star.removeEventListener("mouseout", () =>
-          moveToOriginalPosition(star)
-        );
+        if (isWideScreen) {
+          star.removeEventListener("mouseover", (event) =>
+            moveAway(star, event.clientX, event.clientY)
+          );
+          star.removeEventListener("mouseout", () =>
+            moveToOriginalPosition(star)
+          );
+        }
         star.parentNode.removeChild(star);
       });
     };
