@@ -69,13 +69,13 @@
     display: none;
     position: fixed;
     top: 70px;
-    right: 0;
+    right: 40px;
     height: auto;
     width: auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 0 0.5rem;
     z-index: 10;
   }
 
@@ -91,11 +91,16 @@
 
   .navList li {
     margin: 1rem 0;
-    font-size: 1.2rem;
   }
-
+  .navList a {
+    margin: 0 1rem;
+    padding: 5px;
+    font-size: 0.7rem;
+  }
   .menuToggle {
     display: block;
+    margin-right: 6rem;
+    z-index: 15;
   }
 
   .logoContainer img {
