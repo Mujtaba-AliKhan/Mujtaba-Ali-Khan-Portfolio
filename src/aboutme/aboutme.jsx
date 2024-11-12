@@ -92,6 +92,32 @@ const AboutMe = () => {
           <h2>Professional Experience</h2>
           <ul>
             <li>
+              <strong>Customer Support Professional, Foundever</strong> (Jun 2021 – Present)
+              <ul>
+                <li>
+                  Provided technical support for Verizon Wireless business
+clients, addressing issues with network connectivity, billing,
+and WiFi.
+                </li>
+                <li>
+                  Troubleshot smartphones and tablets, achieving prompt
+resolution for common and complex technical issues,
+contributing to high customer satisfaction.
+
+                </li>
+                <li>
+                  Collaborated with team members to handle escalated cases,
+ensuring efficient and accurate solutions in line with company
+service standards.
+
+                </li>
+                <li>
+                  Communicated complex tech concepts to 100+ non-tech
+                  stakeholders with a 90% satisfaction rate.
+                </li>
+              </ul>
+            </li>
+            <li>
               <strong>IT Support Associate, Tech Mahindra</strong> (Jun 2021 –
               Nov 2022)
               <ul>
