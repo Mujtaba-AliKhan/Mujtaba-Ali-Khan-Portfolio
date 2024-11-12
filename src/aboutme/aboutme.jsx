@@ -92,7 +92,7 @@ const AboutMe = () => {
           <h2>Professional Experience</h2>
           <ul>
             <li>
-              <strong>Customer Support Professional, Foundever</strong> (Jun 2021 – Present)
+              <strong>Customer Support Professional, Foundever</strong> (Jul 2024 – Present)
               <ul>
                 <li>
                   Provided technical support for Verizon Wireless business
