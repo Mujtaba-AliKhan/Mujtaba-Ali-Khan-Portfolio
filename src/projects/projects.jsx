@@ -35,6 +35,14 @@ const Projects = () => {
           </div>
           <div className="projectDescription">
             <h1>Wikipurrdia</h1>
+            <div className="technologies">
+              <p>HTML5</p>
+              <p>CSS3</p>
+              <p>JavaScript</p>
+              <p>React.js</p>
+              <p>Bootstrap</p>
+              <p>Carousel</p>
+            </div>
             <h3>Overview :</h3>
             <p>
               Wikipurrdia is a dynamic React application designed to demonstrate
@@ -110,6 +118,14 @@ const Projects = () => {
           </div>
           <div className="projectDescription">
             <h1>Weather App using Flask</h1>
+            <div className="technologies">
+              <p>HTML5</p>
+              <p>CSS3</p>
+              <p>JavaScript</p>
+              <p>React.js</p>
+              <p>Flask</p>
+              <p>WeatherAPI</p>
+            </div>
             <h3>Overview :</h3>
             <p>
               The Weather App is a web application designed to provide real-time
@@ -193,6 +209,13 @@ const Projects = () => {
           </div>
           <div className="projectDescription">
             <h1>Resume Builder Using Flask</h1>
+            <div className="technologies">
+              <p>HTML5</p>
+              <p>CSS3</p>
+              <p>JavaScript</p>
+              <p>React.js</p>
+              <p>Flask</p>
+            </div>
             <h3>Overview :</h3>
             <p>
               The Resume Builder App is a dynamic web application designed to
@@ -280,6 +303,11 @@ const Projects = () => {
           </div>
           <div className="projectDescription">
             <h1>To-do List App</h1>
+            <div className="technologies">
+              <p>HTML5</p>
+              <p>CSS3</p>
+              <p>JavaScript</p>
+            </div>
             <h3>Overview :</h3>
             <p>
               The To-Do List App is a straightforward web application that
@@ -358,6 +386,10 @@ const Projects = () => {
           </div>
           <div className="projectDescription">
             <h1>Food Munch App</h1>
+            <div className="technologies">
+              <p>HTML5</p>
+              <p>CSS3</p>
+            </div>
             <h3>Overview :</h3>
             <p>
               The Food Munch App is a beautifully designed single-page
