@@ -20,7 +20,7 @@
   border: none;
   cursor: pointer;
   position: absolute;
-  right: 70px;
+  right: 0;
   top: 1rem;
   transition: transform 0.3s ease;
 }
