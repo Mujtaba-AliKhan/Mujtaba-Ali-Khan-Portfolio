@@ -61,3 +61,11 @@ body {
     filter: none;
   }
 }
+
+@media (max-width: 768px) {
+  .sky {
+    height: 50vh;
+    width: 120%;
+    background-size: cover;
+  }
+}
