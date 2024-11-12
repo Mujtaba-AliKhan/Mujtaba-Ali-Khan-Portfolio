@@ -103,3 +103,20 @@
     margin-right: 2rem;
   }
 }
+
+.technologies {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.technologies p {
+  background-color: #e67e22;
+  color: white;
+  padding: 5px;
+  border-radius: 15px;
+}
+.technologies p:hover {
+  border: #e67e22;
+  background-color: white;
+  color: #e67e22;
+}
