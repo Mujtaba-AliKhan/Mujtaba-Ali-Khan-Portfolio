@@ -93,17 +93,6 @@
   transition: all 0.5s ease;
 }
 
-@media (min-width: 768px) {
-  .projectItemDetails {
-    flex-direction: row;
-  }
-
-  .projectImage {
-    margin-bottom: 0;
-    margin-right: 2rem;
-  }
-}
-
 .technologies {
   display: flex;
   gap: 1rem;
@@ -114,6 +103,7 @@
   color: white;
   padding: 5px;
   border-radius: 15px;
+  margin: 0;
 }
 .technologies p:hover {
   border: #e67e22;
@@ -124,6 +114,17 @@
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .projectItemDetails {
+    flex-direction: row;
+  }
+
+  .projectImage {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
 }
 @media (max-width: 768px) {
   .projectsContainer {
@@ -151,6 +152,7 @@
     padding: 1rem;
     font-size: 0.7rem;
   }
+
   .technologies {
     gap: 5px;
   }
