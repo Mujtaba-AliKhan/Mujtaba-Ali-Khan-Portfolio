@@ -1,24 +1,21 @@
-* {
-  padding: 0;
-  margin: 0;
-}
 body {
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
   position: relative;
 }
 .sky {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-image: radial-gradient(circle, #030330 0%, rgba(0, 0, 0, 1) 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .star {
   position: absolute;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
   pointer-events: none;
   user-select: none;
+  z-index: 1;
 }
 
 .size1 {
@@ -62,5 +59,26 @@ body {
     height: 50vh;
     width: 100%;
     background-size: cover;
+  }
+
+  .size1 {
+    width: 1px;
+    height: 1px;
+  }
+  .size2 {
+    width: 2px;
+    height: 2px;
+  }
+  .size3 {
+    width: 3px;
+    height: 3px;
+  }
+  .size4 {
+    width: 5px;
+    height: 5px;
+  }
+  .size5 {
+    width: 8px;
+    height: 8px;
   }
 }
