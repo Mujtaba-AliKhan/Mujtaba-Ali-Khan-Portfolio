@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -11,11 +10,10 @@ body {
 }
 .sky {
   height: 100vh;
-  width: 125%;
-  overflow: hidden;
-  background-color: black;
+  width: 100vw;
   background-image: radial-gradient(circle, #030330 0%, rgba(0, 0, 0, 1) 100%);
 }
+
 .star {
   position: absolute;
   transition: all 0.5s ease-out;
@@ -28,25 +26,21 @@ body {
   height: 3px;
   animation: blinkStar 0.3s infinite alternate;
 }
-
 .size2 {
   width: 4px;
   height: 4px;
   animation: blinkStar 0.2s infinite alternate;
 }
-
 .size3 {
   width: 5px;
   height: 5px;
   animation: blinkStar 0.4s infinite alternate;
 }
-
 .size4 {
   width: 10px;
   height: 10px;
   animation: blinkStar 0.5s infinite alternate;
 }
-
 .size5 {
   width: 15px;
   height: 15px;
@@ -66,7 +60,7 @@ body {
 @media (max-width: 768px) {
   .sky {
     height: 50vh;
-    width: 125%;
+    width: 100%;
     background-size: cover;
   }
 }
