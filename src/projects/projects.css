@@ -120,3 +120,35 @@
   background-color: white;
   color: #e67e22;
 }
+.viewLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .projectsContainer {
+    padding: 1rem;
+  }
+
+  .projectHeading {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .projectItem {
+    padding: 1rem;
+  }
+
+  .projectItemDetails {
+    flex-direction: column;
+  }
+
+  .projectImage {
+    margin: 0 auto 1rem;
+  }
+
+  .projectDescription {
+    padding: 1rem;
+    font-size: 0.7rem;
+  }
+}
