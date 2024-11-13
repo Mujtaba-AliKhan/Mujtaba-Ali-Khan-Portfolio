@@ -145,15 +145,25 @@
   }
 
   .projectImage {
-    margin: 0 auto 1rem;
+    margin: 0 auto;
   }
 
   .projectDescription {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     font-size: 0.7rem;
   }
-
   .technologies {
     gap: 5px;
+  }
+
+  .projectItem h1,
+  .projectItem h3 {
+    margin-bottom: 5px;
+  }
+  .projectItem h1 {
+    font-size: 1.2rem;
+  }
+  .projectItem h3 {
+    font-size: 1rem;
   }
 }
