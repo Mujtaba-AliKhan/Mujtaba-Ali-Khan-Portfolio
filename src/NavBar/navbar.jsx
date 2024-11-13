@@ -12,9 +12,9 @@ const Navbar = () => {
   return (
     <div className="navbarContainer">
       <div className="logoContainer">
-        <Link to="/">
+        <a href="/">
           <img src="/makLogo.png" alt="logo" height={"80px"} />
-        </Link>
+        </a>
       </div>
       <div>
         <button
