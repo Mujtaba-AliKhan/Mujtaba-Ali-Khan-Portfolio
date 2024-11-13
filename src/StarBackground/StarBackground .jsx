@@ -6,18 +6,24 @@ import Projects from "../projects/projects";
 const StarBackground = () => {
   useEffect(() => {
     const stars = [];
-    // const numStars = window.innerWidth < 768 ? 200 : 500;
     const isWideScreen = window.innerWidth > 768;
     const numStars = isWideScreen ? 500 : 200;
+    const skyElement = document.querySelector(".sky");
 
-    for (let i = 0; i < numStars; i++) {
-      const star = document.createElement("img");
-      star.src = "/star.png";
-      star.className = `star size${Math.floor(Math.random() * 5) + 1}`;
-      star.style.top = `${Math.random() * window.innerHeight}px`;
-      star.style.left = `${Math.random() * window.innerWidth}px`;
-      document.body.appendChild(star);
-      stars.push(star);
+    if (skyElement) {
+      const skyWidth = skyElement.clientWidth;
+      const skyHeight = skyElement.clientHeight;
+
+      for (let i = 0; i < numStars; i++) {
+        const star = document.createElement("img");
+        star.src = "/star.png";
+        star.className = `star size${Math.floor(Math.random() * 5) + 1}`;
+        star.style.position = "absolute";
+        star.style.top = `${Math.random() * skyHeight}px`;
+        star.style.left = `${Math.random() * skyWidth}px`;
+        skyElement.appendChild(star);
+        stars.push(star);
+      }
     }
 
     if (isWideScreen) {
