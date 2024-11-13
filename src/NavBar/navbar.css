@@ -23,6 +23,7 @@
   right: 50px;
   top: 1rem;
   transition: transform 0.3s ease;
+  filter: drop-shadow(1px 1px 1px black);
 }
 
 .menuToggle.rotate {
