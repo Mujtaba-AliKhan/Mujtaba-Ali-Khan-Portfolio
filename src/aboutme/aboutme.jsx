@@ -6,29 +6,36 @@ const AboutMe = () => {
     <section className="about-me">
       <h1>About Me</h1>
       <div className="about-me-content">
-        <img
-          src="/mujtabaalikhan.jpg"
-          alt="Mujtaba Ali Khan"
-          className="profile-photo"
-        />
-        <p>
-          Hello! I'm <strong>Mujtaba Ali Khan</strong>, a passionate{" "}
-          <strong>Full Stack Developer</strong> based in{" "}
-          <strong>Hyderabad, India</strong>.
-        </p>
+        <div className="gradient-border">
+          <div className="profilepicContainer">
+            <img
+              src="/mujtabaalikhan.jpg"
+              alt="Mujtaba Ali Khan"
+              className="profile-photo"
+            />
+          </div>
+        </div>
+        <div className="intro">
+          <p>
+            Hello! I'm <strong>Mujtaba Ali Khan</strong>, a passionate{" "}
+            <strong>Full Stack Developer</strong> based in{" "}
+            <strong>Hyderabad, India</strong>.
+          </p>
 
-        <p>
-          With extensive experience in both front-end and back-end technologies,
-          I specialize in creating high-quality software solutions. My expertise
-          includes <strong>HTML5, CSS3, JavaScript, React.js, Redux</strong> for
-          the front-end, and <strong>Python, Flask, SQL, DBMS</strong> for the
-          back-end. Additionally, I am proficient with tools such as{" "}
-          <strong>
-            Git, MS Office, Photoshop, and have strong skills in testing,
-            debugging, communication, customer service, and teamwork
-          </strong>
-          .
-        </p>
+          <p>
+            With extensive experience in both front-end and back-end
+            technologies, I specialize in creating high-quality software
+            solutions. My expertise includes{" "}
+            <strong>HTML5, CSS3, JavaScript, React.js, Redux</strong> for the
+            front-end, and <strong>Python, Flask, SQL, DBMS</strong> for the
+            back-end. Additionally, I am proficient with tools such as{" "}
+            <strong>
+              Git, MS Office, Photoshop, and have strong skills in testing,
+              debugging, communication, customer service, and teamwork
+            </strong>
+            .
+          </p>
+        </div>
 
         <div className="projects">
           <h2>Projects</h2>
@@ -91,28 +98,6 @@ const AboutMe = () => {
         <div className="experience">
           <h2>Professional Experience</h2>
           <ul>
-            <li>
-              <strong>Customer Support Professional, Foundever</strong> (Jul 2024 – Present)
-              <ul>
-                <li>
-                  Provided technical support for Verizon Wireless business
-clients, addressing issues with network connectivity, billing,
-and WiFi.
-                </li>
-                <li>
-                  Troubleshot smartphones and tablets, achieving prompt
-resolution for common and complex technical issues,
-contributing to high customer satisfaction.
-
-                </li>
-                <li>
-                  Collaborated with team members to handle escalated cases,
-ensuring efficient and accurate solutions in line with company
-service standards.
-
-                </li>
-              </ul>
-            </li>
             <li>
               <strong>IT Support Associate, Tech Mahindra</strong> (Jun 2021 –
               Nov 2022)
