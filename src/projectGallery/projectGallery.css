@@ -1,3 +1,6 @@
+.projectGalleryPage {
+  min-height: 70vh;
+}
 .projectGalleryContainer {
   background-color: #1e1e1e;
   padding: 50px;
