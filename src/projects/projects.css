@@ -107,6 +107,7 @@
   padding: 5px;
   border-radius: 15px;
   margin: 0;
+  box-shadow: 1px 1px 4px white;
 }
 .technologies p:hover {
   border: #e67e22;
@@ -169,12 +170,12 @@
   .projectItem h3 {
     font-size: 1rem;
   }
-  
+
   .technologies img {
-    height: 20px;
+    height: 15px;
   }
 }
 .technologies img {
   height: 30px;
-  filter: drop-shadow(1px 1px black);
+  filter: drop-shadow(1px 1px 2px black);
 }
