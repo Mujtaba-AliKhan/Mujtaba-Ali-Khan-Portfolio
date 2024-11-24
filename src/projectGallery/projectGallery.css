@@ -83,7 +83,7 @@ h2 {
   }
 
   .projectGalleryContainer h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .video {
     height: 60px;
@@ -91,8 +91,22 @@ h2 {
     margin: 10px;
     transition: all 0.3s ease-in-out;
   }
+  .galleryItem {
+    border-radius: 10px;
+    margin: 10px 0;
+  }
 
+  .galleryHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+  }
   .video.expanded {
     height: 150px;
+  }
+
+  .galleryHeading i {
+    font-size: 1.5rem;
   }
 }
