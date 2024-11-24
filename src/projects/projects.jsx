@@ -36,11 +36,21 @@ const Projects = () => {
           <div className="projectDescription">
             <h1>Wikipurrdia</h1>
             <div className="technologies">
-              <p>HTML5</p>
-              <p>CSS3</p>
-              <p>JavaScript</p>
-              <p>React.js</p>
-              <p>Bootstrap</p>
+              <p>
+                <img src="/html5.png" alt="HTML5" /> HTML5
+              </p>
+              <p>
+                <img src="/css3.png" alt="CSS3" /> CSS3
+              </p>
+              <p>
+                <img src="/javascript.png" alt="JavaScript" /> JavaScript
+              </p>
+              <p>
+                <img src="/reactjs.png" alt="React.js" /> React.js
+              </p>
+              <p>
+                <img src="/bootstrap.png" alt="Bootstrap" /> Bootstrap
+              </p>
               <p>Carousel</p>
             </div>
             <h3>Overview :</h3>
@@ -92,22 +102,24 @@ const Projects = () => {
             >
               {detailsVisible.wikipurrdia ? "See Less" : "See More"}
             </p>
-            <a
-              href="https://github.com/Mujtaba-AliKhan/Wikipurrdia"
-              className="githubLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-            </a>
-            <a
-              href="https://wikipurrdia.netlify.app/"
-              className="githubLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Netlify
-            </a>
+            <div className="viewLinks">
+              <a
+                href="https://github.com/Mujtaba-AliKhan/Wikipurrdia"
+                className="githubLink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
+              <a
+                href="https://wikipurrdia.netlify.app/"
+                className="githubLink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Netlify
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -127,12 +139,23 @@ const Projects = () => {
           <div className="projectDescription">
             <h1>Weather App using Flask</h1>
             <div className="technologies">
-              <p>HTML5</p>
-              <p>CSS3</p>
-              <p>JavaScript</p>
-              <p>React.js</p>
-              <p>Flask</p>
-              <p>WeatherAPI</p>
+              <p>
+                <img src="/html5.png" alt="HTML5" /> HTML5
+              </p>
+              <p>
+                <img src="/css3.png" alt="CSS3" /> CSS3
+              </p>
+              <p>
+                <img src="/javascript.png" alt="JavaScript" /> JavaScript
+              </p>
+              <p>
+                <img src="/reactjs.png" alt="React.js" /> React.js
+              </p>
+              <p>
+                <img src="/flask.png" alt="flask.js" />
+                Flask
+              </p>
+              <p> WeatherAPI</p>
             </div>
             <h3>Overview :</h3>
             <p>
@@ -192,14 +215,16 @@ const Projects = () => {
             >
               {detailsVisible.weatherApp ? "See Less" : "See More"}
             </p>
-            <a
-              href="https://github.com/Mujtaba-AliKhan/Weather-App-using-Flask"
-              className="githubLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-            </a>
+            <div className="viewLinks">
+              <a
+                href="https://github.com/Mujtaba-AliKhan/Weather-App-using-Flask"
+                className="githubLink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -218,11 +243,22 @@ const Projects = () => {
           <div className="projectDescription">
             <h1>Resume Builder Using Flask</h1>
             <div className="technologies">
-              <p>HTML5</p>
-              <p>CSS3</p>
-              <p>JavaScript</p>
-              <p>React.js</p>
-              <p>Flask</p>
+              <p>
+                <img src="/html5.png" alt="HTML5" /> HTML5
+              </p>
+              <p>
+                <img src="/css3.png" alt="CSS3" /> CSS3
+              </p>
+              <p>
+                <img src="/javascript.png" alt="JavaScript" /> JavaScript
+              </p>
+              <p>
+                <img src="/reactjs.png" alt="React.js" /> React.js
+              </p>
+              <p>
+                <img src="/flask.png" alt="flask.js" />
+                Flask
+              </p>
             </div>
             <h3>Overview :</h3>
             <p>
@@ -286,14 +322,16 @@ const Projects = () => {
             >
               {detailsVisible.resumeBuilder ? "See Less" : "See More"}
             </p>
-            <a
-              href="https://github.com/Mujtaba-AliKhan/Resume-Builder-flask"
-              className="githubLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-            </a>
+            <div className="viewLinks">
+              <a
+                href="https://github.com/Mujtaba-AliKhan/Resume-Builder-flask"
+                className="githubLink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -312,9 +350,15 @@ const Projects = () => {
           <div className="projectDescription">
             <h1>To-do List App</h1>
             <div className="technologies">
-              <p>HTML5</p>
-              <p>CSS3</p>
-              <p>JavaScript</p>
+              <p>
+                <img src="/html5.png" alt="HTML5" /> HTML5
+              </p>
+              <p>
+                <img src="/css3.png" alt="CSS3" /> CSS3
+              </p>
+              <p>
+                <img src="/javascript.png" alt="JavaScript" /> JavaScript
+              </p>
             </div>
             <h3>Overview :</h3>
             <p>
@@ -368,14 +412,16 @@ const Projects = () => {
             >
               {detailsVisible.todoList ? "See Less" : "See More"}
             </p>
-            <a
-              href="https://github.com/Mujtaba-AliKhan/Todos-App"
-              className="githubLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-            </a>
+            <div className="viewLinks">
+              <a
+                href="https://github.com/Mujtaba-AliKhan/Todos-App"
+                className="githubLink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -394,9 +440,14 @@ const Projects = () => {
           </div>
           <div className="projectDescription">
             <h1>Food Munch App</h1>
+
             <div className="technologies">
-              <p>HTML5</p>
-              <p>CSS3</p>
+              <p>
+                <img src="/html5.png" alt="HTML5" /> HTML5
+              </p>
+              <p>
+                <img src="/css3.png" alt="CSS3" /> CSS3
+              </p>
             </div>
             <h3>Overview :</h3>
             <p>
