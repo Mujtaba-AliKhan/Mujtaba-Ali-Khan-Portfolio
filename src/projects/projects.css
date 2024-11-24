@@ -169,6 +169,10 @@
   .projectItem h3 {
     font-size: 1rem;
   }
+  
+  .technologies img {
+    height: 20px;
+  }
 }
 .technologies img {
   height: 30px;
