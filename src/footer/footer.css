@@ -4,6 +4,8 @@
   text-align: center;
   color: #d1d1d1;
   border-top: 2px solid #e67e22;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-content {
