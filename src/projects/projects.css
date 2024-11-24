@@ -100,6 +100,9 @@
 }
 .technologies p {
   background-color: #e67e22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   padding: 5px;
   border-radius: 15px;
@@ -166,4 +169,8 @@
   .projectItem h3 {
     font-size: 1rem;
   }
+}
+.technologies img {
+  height: 30px;
+  filter: drop-shadow(1px 1px black);
 }
