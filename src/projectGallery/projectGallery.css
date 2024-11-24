@@ -3,12 +3,15 @@
   padding: 50px;
   border-radius: 15px;
   box-shadow: 2px -2px 50px -6px #000000;
-  max-width: 1350px;
+  max-width: 1000px;
   margin: 40px auto;
   font-family: "BioRhyme", "Arial", sans-serif;
   color: #d1d1d1;
   line-height: 1.8;
   margin-top: 7rem;
+}
+.projectGalleryContainer h1 {
+  font-size: 3em;
 }
 .projectGalleryContainer h1,
 h2 {
@@ -25,7 +28,6 @@ h2 {
 .galleryItem {
   background-color: #d1d1d1;
   border-radius: 20px;
-  padding: 1rem;
   margin: 20px 0;
 }
 .mediaContainer.hide {
@@ -33,18 +35,16 @@ h2 {
   flex-wrap: wrap;
   max-height: 0px;
   overflow: hidden;
-  opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.7s ease-in-out;
 }
 .mediaContainer.show {
   display: flex;
-  opacity: 1;
   flex-wrap: wrap;
-  max-height: 1000px;
-  transition: all 0.5s ease;
+  max-height: 5000px;
+  transition: all 0.7s ease-in-out;
 }
 .video {
-  height: 250px;
+  height: 200px;
   border-radius: 20px;
   margin: 20px;
   cursor: pointer;
@@ -72,4 +72,27 @@ h2 {
 }
 .flipIcon {
   transform: rotate(-180deg);
+}
+
+@media (max-width: 768px) {
+  .projectGalleryContainer {
+    padding: 20px;
+    margin: 7rem 20px 40px;
+    line-height: 1.8;
+    font-size: 10px;
+  }
+
+  .projectGalleryContainer h2 {
+    font-size: 1.5rem;
+  }
+  .video {
+    height: 60px;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .video.expanded {
+    height: 150px;
+  }
 }
