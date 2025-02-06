@@ -13,9 +13,11 @@ body {
 .star {
   position: absolute;
   transition: all 0.3s ease-out;
+  transition-timing-function: ease-out;
   pointer-events: none;
   user-select: none;
   z-index: 1;
+  will-change: transform, top, left;
 }
 
 .size1 {
@@ -56,7 +58,7 @@ body {
 
 @media (max-width: 768px) {
   .sky {
-    height: 50vh;
+    height: 100vh;
     width: 100%;
     background-size: cover;
   }

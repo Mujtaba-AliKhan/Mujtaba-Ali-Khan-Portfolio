@@ -1,0 +1,91 @@
+[
+  {
+    "title": "Wikipurrdia",
+    "videos": [
+      {
+        "src": "/Gallery/Wikipurrdia/wikipurrdia1.mp4",
+        "description": "Homepage"
+      },
+      {
+        "src": "/Gallery/Wikipurrdia/wikipurrdia2.mp4",
+        "description": "Breeds page"
+      },
+      {
+        "src": "/Gallery/Wikipurrdia/wikipurrdia3.mp4",
+        "description": "Coats page"
+      },
+      {
+        "src": "/Gallery/Wikipurrdia/wikipurrdia4.mp4",
+        "description": "Contact Us page"
+      },
+      {
+        "src": "/Gallery/Wikipurrdia/wikipurrdia5.mp4",
+        "description": "About Us page"
+      }
+    ]
+  },
+  {
+    "title": "Weather App",
+    "videos": [
+      {
+        "src": "/Gallery/Weather App/weather-app1.mp4",
+        "description": "Search City"
+      },
+      {
+        "src": "/Gallery/Weather App/weather-app2.mp4",
+        "description": "Weather in metric system"
+      },
+      {
+        "src": "/Gallery/Weather App/weather-app3.mp4",
+        "description": "Weather in imperial system"
+      },
+      {
+        "src": "/Gallery/Weather App/weather-app4.mp4",
+        "description": "Cloudy Weather"
+      },
+      {
+        "src": "/Gallery/Weather App/weather-app5.mp4",
+        "description": "Rainy Weather"
+      }
+    ]
+  },
+  {
+    "title": "Resume Builder",
+    "videos": [
+      {
+        "src": "/Gallery/Resume Builder/Resume-Builder1.mp4",
+        "description": "Login and Logout"
+      },
+      {
+        "src": "/Gallery/Resume Builder/Resume-Builder2.mp4",
+        "description": "Signup Page"
+      },
+      {
+        "src": "/Gallery/Resume Builder/Resume-Builder3.mp4",
+        "description": "Creating Resume and storing in SQL"
+      }
+    ]
+  },
+  {
+    "title": "To-do List",
+    "videos": [
+      {
+        "src": "/Gallery/Todo List/todoList1.mp4",
+        "description": "Adding list items"
+      },
+      {
+        "src": "/Gallery/Todo List/todoList2.mp4",
+        "description": "Saving and removing list items"
+      }
+    ]
+  },
+  {
+    "title": "Food Munch",
+    "videos": [
+      {
+        "src": "/Gallery/Food Munch/foodmunch.mp4",
+        "description": "Food ordering demo"
+      }
+    ]
+  }
+]

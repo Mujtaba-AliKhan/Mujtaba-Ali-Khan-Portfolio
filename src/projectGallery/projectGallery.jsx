@@ -1,307 +1,93 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 import "./projectGallery.css";
+import projects from "./projects.json";
 
 const ProjectGallery = () => {
-  const [expandedVideo, setExpandedVideo] = useState(null);
   const videosRef = useRef([]);
-  const [showMediaContainer, setShowMediaContainer] = useState({
-    wikipurrdia: false,
-    weatherApp: false,
-    todoList: false,
-    foodMunch: false,
-    resumeBuilder: false,
-  });
-  const handleVideoClick = (index) => {
-    setExpandedVideo(index);
-  };
-
-  const handleHeadingClick = (project) => {
-    setShowMediaContainer((prevState) => ({
-      ...prevState,
-      [project]: !prevState[project],
-    }));
-  };
-  useEffect(() => {
-    const handleBackgroundClick = (event) => {
-      if (expandedVideo !== null && !event.target.closest(".video")) {
-        setExpandedVideo(null);
-      }
-    };
-
-    window.addEventListener("click", handleBackgroundClick);
-
-    return () => {
-      window.removeEventListener("click", handleBackgroundClick);
-    };
-  }, [expandedVideo]);
 
   useEffect(() => {
-    videosRef.current.forEach((video) => {
-      if (video) {
-        video.playbackRate = 0.75;
-      }
-    });
+    window.scrollTo(0, 0);
   }, []);
 
-  const WikipurrdiaVideoDescriptions = [
-    "Homepage",
-    "Breeds page",
-    "Coats page",
-    "Contact Us page",
-    "About Us page",
-  ];
-  const WeatherAppVideoDescriptions = [
-    "Search City",
-    "Weather in metric system",
-    "Weather in imperial system",
-    "Cloudy Weather",
-    "Rainy Weather",
-  ];
-  const ResumeBuilderVideoDescriptions = [
-    "Login and Logout",
-    "Signup Page",
-    "Creating Resume and storing in SQL",
-  ];
-  const TodoListVideoDescriptions = [
-    "Adding list items",
-    "Saving and removing list items",
-  ];
-  const FoodMunchVideoDescriptions = [];
+  useEffect(() => {
+    projects.forEach((_, projectIndex) => {
+      if (!videosRef.current[projectIndex]) {
+        videosRef.current[projectIndex] = [];
+      }
+    });
+  }, [projects]);
+
   return (
     <div className="projectGalleryContainer">
       <h1>Project Gallery</h1>
-      <ul className="galleryLists">
-        <li>
-          <div className="wikipurrdiaGallery galleryItem">
-            <div
-              className="galleryHeading"
-              onClick={() => handleHeadingClick("wikipurrdia")}
-            >
-              <h2>Wikipurrdia</h2>
-              <i
-                className={`bi bi-menu-down ${
-                  showMediaContainer.wikipurrdia ? "flipIcon" : ""
-                }`}
-              ></i>
-            </div>
-            <div
-              className={`mediaContainer ${
-                showMediaContainer.wikipurrdia ? "show" : "hide"
-              }`}
-            >
-              {[1, 2, 3, 4, 5].map((num, index) => (
-                <div key={index} className="videoDescription">
-                  <h3>{WikipurrdiaVideoDescriptions[index]}</h3>
-
+      {projects.map((project, projectIndex) => (
+        <div key={projectIndex} className="galleryItem">
+          <h2>{project.title}</h2>
+          <Swiper
+            modules={[Navigation, Pagination, EffectCoverflow]}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+              clickable: true,
+            }}
+            pagination={{ el: ".swiper-pagination", clickable: true }}
+            effect={project.videos.length > 1 ? "coverflow" : "slide"}
+            centeredSlides={true}
+            loop={false}
+            slidesPerView={project.videos.length > 1 ? "auto" : 1}
+            coverflowEffect={
+              project.videos.length > 1
+                ? {
+                    rotate: 10,
+                    stretch: 10,
+                    depth: 300,
+                    modifier: 2.5,
+                    slideShadows: true,
+                  }
+                : {}
+            }
+            className="swiper-container"
+          >
+            {project.videos.map((video, videoIndex) => (
+              <SwiperSlide key={videoIndex} className="videoSlide">
+                <h3 className="videoTitle">{video.description}</h3>
+                <div className="videoWrapper">
                   <video
                     autoPlay
                     loop
                     muted
-                    ref={(video) => (videosRef.current[index] = video)}
-                    className={`video ${
-                      expandedVideo === index ? "expanded" : ""
-                    }`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleVideoClick(index);
+                    ref={(el) => {
+                      if (!videosRef.current[projectIndex]) {
+                        videosRef.current[projectIndex] = [];
+                      }
+                      videosRef.current[projectIndex][videoIndex] = el;
                     }}
+                    className="video"
                   >
-                    <source
-                      src={`/Gallery/Wikipurrdia/wikipurrdia${num}.mp4`}
-                      type="video/mp4"
-                    />
+                    <source src={video.src} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
-              ))}
+              </SwiperSlide>
+            ))}
+            <div className="slider-controler">
+              <div className="swiper-button-prev slider-arrow">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+              </div>
+              <div className="swiper-pagination"></div>
+              <div className="swiper-button-next slider-arrow">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <div className="weatherAppGallery galleryItem">
-            <div
-              className="galleryHeading"
-              onClick={() => handleHeadingClick("weatherApp")}
-            >
-              <h2>Weather App</h2>
-              <i
-                className={`bi bi-menu-down ${
-                  showMediaContainer.weatherApp ? "flipIcon" : ""
-                }`}
-              ></i>
-            </div>
-            <div
-              className={`mediaContainer ${
-                showMediaContainer.weatherApp ? "show" : "hide"
-              }`}
-            >
-              {[1, 2, 3, 4, 5].map((num, index) => (
-                <div key={index} className="videoDescription">
-                  <h3>{WeatherAppVideoDescriptions[index]}</h3>
-
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    ref={(video) => (videosRef.current[index] = video)}
-                    className={`video ${
-                      expandedVideo === index ? "expanded" : ""
-                    }`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleVideoClick(index);
-                    }}
-                  >
-                    <source
-                      src={`/Gallery/Weather App/weather-app${num}.mp4`}
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              ))}
-            </div>
-          </div>
-        </li>
-        <li>
-          <div className="resumeBuilderGallery galleryItem">
-            <div
-              className="galleryHeading"
-              onClick={() => handleHeadingClick("resumeBuilder")}
-            >
-              <h2>Resume Builder</h2>
-              <i
-                className={`bi bi-menu-down ${
-                  showMediaContainer.resumeBuilder ? "flipIcon" : ""
-                }`}
-              ></i>
-            </div>
-            <div
-              className={`mediaContainer ${
-                showMediaContainer.resumeBuilder ? "show" : "hide"
-              }`}
-            >
-              {[1, 2, 3].map((num, index) => (
-                <div key={index} className="videoDescription">
-                  <h3>{ResumeBuilderVideoDescriptions[index]}</h3>
-
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    ref={(video) => (videosRef.current[index] = video)}
-                    className={`video ${
-                      expandedVideo === index ? "expanded" : ""
-                    }`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleVideoClick(index);
-                    }}
-                  >
-                    <source
-                      src={`/Gallery/Resume Builder/Resume-Builder${num}.mp4`}
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              ))}
-            </div>
-          </div>
-        </li>
-        <li>
-          <div className="todoListGallery galleryItem">
-            <div
-              className="galleryHeading"
-              onClick={() => handleHeadingClick("todoList")}
-            >
-              <h2>To-do List</h2>
-              <i
-                className={`bi bi-menu-down ${
-                  showMediaContainer.todoList ? "flipIcon" : ""
-                }`}
-              ></i>
-            </div>
-            <div
-              className={`mediaContainer ${
-                showMediaContainer.todoList ? "show" : "hide"
-              }`}
-            >
-              {[1, 2].map((num, index) => (
-                <div key={index} className="videoDescription">
-                  <h3>{TodoListVideoDescriptions[index]}</h3>
-
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    ref={(video) => (videosRef.current[index] = video)}
-                    className={`video ${
-                      expandedVideo === index ? "expanded" : ""
-                    }`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleVideoClick(index);
-                    }}
-                  >
-                    <source
-                      src={`/Gallery/Todo List/todoList${num}.mp4`}
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              ))}
-            </div>
-          </div>
-        </li>
-        <li>
-          <div className="foodMunchGallery galleryItem">
-            <div
-              className="galleryHeading"
-              onClick={() => handleHeadingClick("foodMunch")}
-            >
-              <h2>Food Munch</h2>
-              <i
-                className={`bi bi-menu-down ${
-                  showMediaContainer.foodMunch ? "flipIcon" : ""
-                }`}
-              ></i>
-            </div>
-            <div
-              className={`mediaContainer ${
-                showMediaContainer.foodMunch ? "show" : "hide"
-              }`}
-            >
-              {[1].map((index) => (
-                <div key={index} className="videoDescription">
-                  <h3>{FoodMunchVideoDescriptions[index]}</h3>
-
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    ref={(video) => (videosRef.current[index] = video)}
-                    className={`video ${
-                      expandedVideo === index ? "expanded" : ""
-                    }`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleVideoClick(index);
-                    }}
-                  >
-                    <source
-                      src={`/Gallery/Food Munch/foodmunch.mp4`}
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              ))}
-            </div>
-          </div>
-        </li>
-      </ul>
+          </Swiper>
+        </div>
+      ))}
     </div>
   );
 };

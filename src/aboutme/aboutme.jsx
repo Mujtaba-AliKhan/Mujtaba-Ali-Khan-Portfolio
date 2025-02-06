@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./aboutme.css";
 
 const AboutMe = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="about-me">
       <h1>About Me</h1>
@@ -15,7 +19,7 @@ const AboutMe = () => {
             />
           </div>
         </div>
-        <div className="intro">
+        <div className="intro aboutmeItem">
           <p>
             Hello! I'm <strong>Mujtaba Ali Khan</strong>, a passionate{" "}
             <strong>Full Stack Developer</strong> based in{" "}
@@ -37,7 +41,7 @@ const AboutMe = () => {
           </p>
         </div>
 
-        <div className="projects">
+        <div className="projects aboutmeItem">
           <h2>Projects</h2>
           <ul>
             <li>
@@ -95,7 +99,7 @@ const AboutMe = () => {
             </li>
           </ul>
         </div>
-        <div className="experience">
+        <div className="experience aboutmeItem">
           <h2>Professional Experience</h2>
           <ul>
             <li>
@@ -163,7 +167,7 @@ const AboutMe = () => {
             </li>
           </ul>
         </div>
-        <div className="education">
+        <div className="education  aboutmeItem">
           <h2>Education</h2>
           <p>
             <strong>Bachelor's of Computer Applications</strong>, Gulbarga
@@ -175,59 +179,58 @@ const AboutMe = () => {
           </p>
         </div>
 
-        <div className="courses">
+        <div className="courses aboutmeItem">
           <h2>Courses</h2>
           <ul>
             <li>Full-Stack Development with Python, Niltech Edu</li>
             <li>Python Complete Course For Python Beginners, Udemy.com</li>
           </ul>
+          <p>
+            Beyond my professional life, I am deeply passionate about learning
+            new technologies and staying up-to-date with industry trends. I
+            believe that continuous learning and adaptation are key to success
+            in the tech industry. One of my favorite projects was developing the{" "}
+            <a
+              href="https://github.com/Mujtaba-AliKhan/Wikipurrdia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Wikipurrdia
+            </a>{" "}
+            website because it combined my love for coding and cats.
+          </p>
+
+          <p>
+            Looking ahead, I am excited to continue growing as a developer and
+            aspire to work on innovative projects that make a significant
+            impact. I am always open to new opportunities for collaboration and
+            professional growth.
+          </p>
+
+          <p>
+            Let's connect! You can find me on{" "}
+            <a
+              href="https://www.linkedin.com/in/mujtaba-alikhan/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>{" "}
+            or check out my projects on{" "}
+            <a
+              href="https://github.com/Mujtaba-AliKhan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            . Feel free to reach out via email at{" "}
+            <a href="mailto:mujtabaalikhan01@gmail.com">
+              mujtabaalikhan01@gmail.com
+            </a>
+            .
+          </p>
         </div>
-
-        <p>
-          Beyond my professional life, I am deeply passionate about learning new
-          technologies and staying up-to-date with industry trends. I believe
-          that continuous learning and adaptation are key to success in the tech
-          industry. One of my favorite projects was developing the{" "}
-          <a
-            href="https://github.com/Mujtaba-AliKhan/Wikipurrdia"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Wikipurrdia
-          </a>{" "}
-          website because it combined my love for coding and cats.
-        </p>
-
-        <p>
-          Looking ahead, I am excited to continue growing as a developer and
-          aspire to work on innovative projects that make a significant impact.
-          I am always open to new opportunities for collaboration and
-          professional growth.
-        </p>
-
-        <p>
-          Let's connect! You can find me on{" "}
-          <a
-            href="https://www.linkedin.com/in/mujtaba-alikhan/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>{" "}
-          or check out my projects on{" "}
-          <a
-            href="https://github.com/Mujtaba-AliKhan"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          . Feel free to reach out via email at{" "}
-          <a href="mailto:mujtabaalikhan01@gmail.com">
-            mujtabaalikhan01@gmail.com
-          </a>
-          .
-        </p>
       </div>
     </section>
   );

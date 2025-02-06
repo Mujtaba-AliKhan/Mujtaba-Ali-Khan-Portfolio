@@ -22,6 +22,21 @@
   box-shadow: 0 4px 8px rgb(0, 0, 0);
   transition: all 0.3s ease-in-out;
 }
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.projectItem {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
 .projectItem h1,
 .projectItem h3 {
   color: #e67e22;
@@ -107,7 +122,6 @@
   padding: 5px;
   border-radius: 15px;
   margin: 0;
-  box-shadow: 1px 1px 4px white;
 }
 .technologies p:hover {
   border: #e67e22;
@@ -118,6 +132,11 @@
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+
+.technologies img {
+  height: 30px;
+  filter: drop-shadow(1px 1px 2px black);
 }
 
 @media (min-width: 768px) {
@@ -158,6 +177,7 @@
   }
   .technologies {
     gap: 5px;
+    font-size: 0.5rem;
   }
 
   .projectItem h1,
@@ -172,10 +192,6 @@
   }
 
   .technologies img {
-    height: 15px;
+    height: 10px;
   }
-}
-.technologies img {
-  height: 30px;
-  filter: drop-shadow(1px 1px 2px black);
 }

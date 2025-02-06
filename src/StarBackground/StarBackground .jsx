@@ -1,104 +1,153 @@
-import { useEffect } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
+import { useLocation } from "react-router-dom";
 import "./StarBackground.css";
 import Homepage from "../homepage/homepage";
 import Projects from "../projects/projects";
 
 const StarBackground = () => {
+  const location = useLocation();
+  const skyRef = useRef(null);
+  const starsContainerRef = useRef(null);
+  const handleMouseMoveRef = useRef(null); // Store event listener reference
+
   useEffect(() => {
-    const stars = [];
+    window.scrollTo(0, 0);
+
+    const shouldScrollToProjects = sessionStorage.getItem("scrollToProjects");
+    if (shouldScrollToProjects === "true") {
+      setTimeout(() => {
+        const projectsSection = document.getElementById("projects-section");
+        if (projectsSection) {
+          projectsSection.scrollIntoView({ behavior: "smooth" });
+        }
+        sessionStorage.removeItem("scrollToProjects");
+      }, 500);
+    }
+
     const isWideScreen = window.innerWidth > 768;
     const numStars = isWideScreen ? 500 : 200;
-    const skyElement = document.querySelector(".sky");
+    const starsContainer = starsContainerRef.current;
+    let starsLoaded = false;
 
-    if (skyElement) {
-      const skyWidth = skyElement.clientWidth;
-      const skyHeight = skyElement.clientHeight;
+    if (starsContainer) {
+      const skyWidth = skyRef.current.clientWidth;
+      const skyHeight = skyRef.current.clientHeight;
+      const centerX = skyWidth / 2;
+      const centerY = skyHeight / 2;
 
+      const starSizes = [
+        "size1",
+        "size1",
+        "size2",
+        "size2",
+        "size3",
+        "size3",
+        "size3",
+        "size4",
+        "size5",
+      ];
+
+      let starsHTML = "";
       for (let i = 0; i < numStars; i++) {
-        const star = document.createElement("img");
-        star.src = "/star.png";
-        star.className = `star size${Math.floor(Math.random() * 5) + 1}`;
-        star.style.position = "absolute";
-        star.style.top = `${Math.random() * skyHeight}px`;
-        star.style.left = `${Math.random() * skyWidth}px`;
-        skyElement.appendChild(star);
-        stars.push(star);
+        const randomSize =
+          starSizes[Math.floor(Math.random() * starSizes.length)];
+        starsHTML += `<img src="/star.png" class="star ${randomSize}" 
+                        style="position:absolute; top:${centerY}px; left:${centerX}px;">`;
+      }
+
+      starsContainer.innerHTML = starsHTML;
+
+      const stars = Array.from(starsContainer.getElementsByClassName("star"));
+
+      stars.forEach((star) => {
+        const randomX = Math.random() * skyWidth;
+        const randomY = Math.random() * skyHeight;
+        const animationDuration = (Math.random() * 2 + 1.5).toFixed(3);
+
+        setTimeout(() => {
+          requestAnimationFrame(() => {
+            star.style.transition = `top ${animationDuration}s ease-out, left ${animationDuration}s ease-out`;
+            star.style.top = `${randomY}px`;
+            star.style.left = `${randomX}px`;
+          });
+        }, 10);
+      });
+
+      if (isWideScreen) {
+        handleMouseMoveRef.current = throttle((event) => {
+          const mouseX = event.clientX;
+          const mouseY = event.clientY;
+          stars.forEach((star) => {
+            const { top, left } = star.getBoundingClientRect();
+            const distance = calculateDistance(
+              mouseX,
+              mouseY,
+              left + star.offsetWidth / 2,
+              top + star.offsetHeight / 2
+            );
+            distance < 100
+              ? moveAway(star, mouseX, mouseY)
+              : moveToOriginalPosition(star);
+          });
+        }, 50);
+
+        document.addEventListener("mousemove", handleMouseMoveRef.current);
       }
     }
 
-    if (isWideScreen) {
-      stars.forEach((star) => {
-        star.addEventListener("mouseover", (event) =>
-          moveAway(star, event.clientX, event.clientY)
-        );
-        star.addEventListener("mouseout", () => moveToOriginalPosition(star));
-      });
-
-      document.addEventListener("mousemove", (event) => {
-        const mouseX = event.clientX;
-        const mouseY = event.clientY;
-
-        stars.forEach((star) => {
-          const { top, left } = star.getBoundingClientRect();
-          const distance = calculateDistance(
-            mouseX,
-            mouseY,
-            left + star.offsetWidth / 2,
-            top + star.offsetHeight / 2
-          );
-
-          if (distance < 100) {
-            moveAway(star, mouseX, mouseY);
-          } else {
-            moveToOriginalPosition(star);
-          }
-        });
-      });
-    }
-
-    function moveAway(star, mouseX, mouseY) {
-      const starRect = star.getBoundingClientRect();
-      const dx = starRect.left + starRect.width / 2 - mouseX;
-      const dy = starRect.top + starRect.height / 2 - mouseY;
-      const angle = Math.atan2(dy, dx);
-      const distance = 50;
-
-      const offsetX = distance * Math.cos(angle);
-      const offsetY = distance * Math.sin(angle);
-      star.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-    }
-
-    function moveToOriginalPosition(star) {
-      star.style.transform = "translate(0, 0)";
-    }
-
-    function calculateDistance(x1, y1, x2, y2) {
-      const dx = x1 - x2;
-      const dy = y1 - y2;
-      return Math.sqrt(dx * dx + dy * dy);
-    }
+    setTimeout(() => {
+      starsLoaded = true;
+    }, 3500);
 
     return () => {
-      stars.forEach((star) => {
-        if (isWideScreen) {
-          star.removeEventListener("mouseover", (event) =>
-            moveAway(star, event.clientX, event.clientY)
-          );
-          star.removeEventListener("mouseout", () =>
-            moveToOriginalPosition(star)
-          );
-        }
-        star.parentNode.removeChild(star);
-      });
+      starsContainer.innerHTML = "";
+      if (isWideScreen && handleMouseMoveRef.current) {
+        document.removeEventListener("mousemove", handleMouseMoveRef.current);
+      }
+    };
+  }, [location]);
+
+  const moveAway = useCallback((star, mouseX, mouseY) => {
+    const starRect = star.getBoundingClientRect();
+    const dx = starRect.left + starRect.width / 2 - mouseX;
+    const dy = starRect.top + starRect.height / 2 - mouseY;
+    const angle = Math.atan2(dy, dx);
+    const distance = 50;
+
+    star.style.transition = "transform 0.3s ease-out";
+    star.style.transform = `translate(${distance * Math.cos(angle)}px, ${
+      distance * Math.sin(angle)
+    }px)`;
+  }, []);
+
+  const moveToOriginalPosition = useCallback((star) => {
+    star.style.transform = "translate(0, 0)";
+  }, []);
+
+  const calculateDistance = useCallback((x1, y1, x2, y2) => {
+    return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
+  }, []);
+
+  const throttle = useCallback((callback, limit) => {
+    let waiting = false;
+    return function (...args) {
+      if (!waiting) {
+        callback.apply(this, args);
+        waiting = true;
+        setTimeout(() => (waiting = false), limit);
+      }
     };
   }, []);
 
   return (
     <div>
-      <div className="sky">
+      <div className="sky" ref={skyRef}>
+        <div className="stars-container" ref={starsContainerRef}></div>
         <Homepage />
       </div>
-      <Projects />
+      <div id="projects-section">
+        <Projects />
+      </div>
     </div>
   );
 };

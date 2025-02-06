@@ -141,6 +141,9 @@
   padding-left: 25px;
   list-style-type: square;
 }
+.aboutmeItem {
+  margin: 0px;
+}
 @media (max-width: 768px) {
   .about-me {
     padding: 20px;
@@ -148,4 +151,20 @@
     line-height: 1.8;
     font-size: 10px;
   }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.aboutmeItem {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }

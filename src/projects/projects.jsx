@@ -24,14 +24,7 @@ const Projects = () => {
       <div className="wikipurrdiaContainer projectItem">
         <div className="projectItemDetails">
           <div className="projectImage">
-            <a
-              href="https://github.com/Mujtaba-AliKhan/Wikipurrdia"
-              className="githubLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/Projects Images/wikipurrdiaImage.png" alt="" />
-            </a>
+            <img src="/Projects Images/wikipurrdiaImage.png" alt="" />
           </div>
           <div className="projectDescription">
             <h1>Wikipurrdia</h1>
@@ -127,14 +120,7 @@ const Projects = () => {
       <div className="weatherAppContainer projectItem">
         <div className="projectItemDetails">
           <div className="projectImage">
-            <a
-              href="https://github.com/Mujtaba-AliKhan/Wikipurrdia"
-              className="githubLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/Projects Images/weather app.png" alt="" />
-            </a>
+            <img src="/Projects Images/weather app.png" alt="" />
           </div>
           <div className="projectDescription">
             <h1>Weather App using Flask</h1>
@@ -231,14 +217,7 @@ const Projects = () => {
       <div className="resumeBuilderContainer projectItem">
         <div className="projectItemDetails">
           <div className="projectImage">
-            <a
-              href="https://github.com/Mujtaba-AliKhan/Resume-Builder-flask"
-              className="githubLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/Projects Images/resumeBuilder.png" alt="" />
-            </a>
+            <img src="/Projects Images/resumeBuilder.png" alt="" />
           </div>
           <div className="projectDescription">
             <h1>Resume Builder Using Flask</h1>
@@ -338,14 +317,7 @@ const Projects = () => {
       <div className="todoListContainer projectItem">
         <div className="projectItemDetails">
           <div className="projectImage">
-            <a
-              href="https://github.com/Mujtaba-AliKhan/Todos-App"
-              className="githubLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/Projects Images/to-do app.png" alt="" />
-            </a>
+            <img src="/Projects Images/to-do app.png" alt="" />
           </div>
           <div className="projectDescription">
             <h1>To-do List App</h1>
@@ -429,14 +401,7 @@ const Projects = () => {
       <div className="foodMunchAppContainer projectItem">
         <div className="projectItemDetails">
           <div className="projectImage">
-            <a
-              href="https://github.com/Mujtaba-AliKhan/Food-Munch-App"
-              className="githubLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/Projects Images/foodMunchApp.png" alt="" />
-            </a>
+            <img src="/Projects Images/foodMunchApp.png" alt="" />
           </div>
           <div className="projectDescription">
             <h1>Food Munch App</h1>

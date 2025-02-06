@@ -1,115 +1,182 @@
-.projectGalleryPage {
-  min-height: 70vh;
-}
 .projectGalleryContainer {
   background-color: #1e1e1e;
   padding: 50px;
   border-radius: 15px;
   box-shadow: 2px -2px 50px -6px #000000;
   max-width: 1000px;
-  margin: 40px auto;
-  font-family: "BioRhyme", "Arial", sans-serif;
+  margin: 8rem auto 40px;
+  font-family: "BioRhyme", Arial, sans-serif;
   color: #d1d1d1;
-  line-height: 1.8;
-  margin-top: 7rem;
+  text-align: center;
 }
+
 .projectGalleryContainer h1 {
-  font-size: 3em;
-}
-.projectGalleryContainer h1,
-h2 {
+  font-size: 3rem;
   color: #e67e22;
-  text-align: center;
+  margin-bottom: 20px;
 }
-.projectGalleryContainer h3 {
-  color: #000000;
-  text-align: center;
-}
-.galleryLists {
-  list-style: none;
-}
+
 .galleryItem {
   background-color: #d1d1d1;
   border-radius: 20px;
-  margin: 20px 0;
+  margin: 20px auto;
+  padding: 20px;
 }
-.mediaContainer.hide {
-  display: flex;
-  flex-wrap: wrap;
-  max-height: 0px;
-  overflow: hidden;
-  transition: all 0.7s ease-in-out;
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
-.mediaContainer.show {
-  display: flex;
-  flex-wrap: wrap;
-  max-height: 5000px;
-  transition: all 0.7s ease-in-out;
+.galleryItem {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
 }
-.video {
-  height: 200px;
-  border-radius: 20px;
-  margin: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.video.expanded {
-  position: fixed;
-  height: 550px;
-  top: 10%;
-  left: 10%;
-  z-index: 100;
-}
-.galleryHeading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 2rem;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-.galleryHeading i {
+.galleryItem h2 {
   color: #e67e22;
   font-size: 2rem;
-  transition: all 0.3s ease-out;
 }
-.flipIcon {
-  transform: rotate(-180deg);
+
+.swiper-container {
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.swiper-slide {
+  width: 35rem;
+  border-radius: 2rem;
+  position: relative;
+}
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  filter: blur(5px);
+}
+
+.slider-controler {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+
+.slider-controler .slider-arrow {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #919191;
+  border-radius: 50%;
+}
+
+.slider-controler .slider-arrow ion-icon {
+  font-size: 2rem;
+  border-radius: 50%;
+  color: #e67e22;
+}
+.slider-controler .slider-arrow:hover {
+  filter: drop-shadow(1px 1px 3px #5c5c5c);
+}
+
+.slider-controler .slider-arrow:active {
+  filter: drop-shadow(inset 1px 1px 3px #5c5c5c);
+  box-shadow: inset -3px -3px 5px #5c5c5c;
+}
+.slider-controler .slider-arrow::after {
+  content: "";
+}
+
+.swiper-pagination {
+  height: 100%;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #e67e22;
+}
+
+.videoSlide {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.videoSlide h3 {
+  color: #000;
+  font-size: 1.4rem;
+}
+
+.video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
 }
 
 @media (max-width: 768px) {
   .projectGalleryContainer {
-    padding: 20px;
-    margin: 7rem 20px 40px;
-    line-height: 1.8;
-    font-size: 10px;
+    padding: 30px;
+    margin: 5rem 20px;
   }
 
-  .projectGalleryContainer h2 {
-    font-size: 1rem;
-  }
-  .video {
-    height: 60px;
-    border-radius: 10px;
+  .projectGalleryContainer h1 {
+    font-size: 1.8rem;
     margin: 10px;
-    transition: all 0.3s ease-in-out;
   }
+
   .galleryItem {
-    border-radius: 10px;
-    margin: 10px 0;
+    padding: 15px;
+    margin: 15px auto;
   }
 
-  .galleryHeading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 1rem;
-  }
-  .video.expanded {
-    height: 150px;
+  .galleryItem h2 {
+    font-size: 1.2rem;
+    margin: 0;
   }
 
-  .galleryHeading i {
+  .swiper-container {
+    padding-bottom: 2rem;
+  }
+
+  .swiper-slide {
+    width: 80%;
+    border-radius: 1.5rem;
+  }
+
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    filter: blur(3px);
+  }
+
+  .slider-controler {
+    width: 70%;
+  }
+
+  .slider-controler .slider-arrow {
+    width: 2rem;
+    height: 2rem;
+  }
+  .swiper-pagination {
+    height: 0.75rem;
+  }
+  .slider-controler .slider-arrow ion-icon {
     font-size: 1.5rem;
+  }
+
+  .videoSlide h3 {
+    font-size: 1rem;
+    margin: 5px;
+  }
+
+  .video {
+    width: 100%;
+    max-width: 100%;
   }
 }
