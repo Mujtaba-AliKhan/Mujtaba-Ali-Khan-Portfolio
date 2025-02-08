@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&display=swap");
-@import url(https://db.onlinewebfonts.com/c/07cb29fdcb073fff840edc6de2067b50?family=Amsterdam+Four_ttf);
+@font-face {
+  font-family: 'Amsterdam Four';
+  src: url('/fonts/AmsterdamFour.woff2') format('woff2'),
+       url('/fonts/AmsterdamFour.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   padding: 0;
