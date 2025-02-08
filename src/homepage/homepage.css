@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Amsterdam Four';
+  src: url('/fonts/AmsterdamFour.woff2') format('woff2'),
+       url('/fonts/AmsterdamFour.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .homepageName {
   color: #ffffff;
   font-family: "Amsterdam Four_ttf";
