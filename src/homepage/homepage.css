@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Amsterdam Four';
-  src: url('/fonts/AmsterdamFour.woff2') format('ttf'),
-       url('/fonts/AmsterdamFour.ttf') format('truetype');
+  src: url('/AmsterdamFour.ttf') format('ttf')
   font-weight: normal;
   font-style: normal;
 }
